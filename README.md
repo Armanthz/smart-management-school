@@ -85,4 +85,99 @@ The main goal of this project is to create a simple and useful system for managi
 | `delete_teacher()` | Removes a teacher using their ID. |
 | `load_data()` | Loads courses, students, and teachers from a JSON file. |
 | `save_data()` | Saves courses, students, and teachers into a JSON file. |
-
+---
+# how it wotks?
+when you open this app you saw this menu:
+```python
+1.students
+2.teachers
+3.courses
+4.classrooms
+5.save
+0.exit
+>>:
+```
+when you chose number1 you can work with studends
+number2:you can work with teachers
+number3:you can see course
+number4:you can work with classrooms
+number5 save the edites
+number 0 close the app
+--- 
+```python
+1.show students
+2.add student
+3.edit student
+4.delete studnet
+5.select student
+0.back
+>>:
+```
+---
+now you see this menu
+number 1 show you all of student
+number2 add a new student
+number3 you chose a student and edit it
+number4 you chose a student for delet
+number 5 you chose a student
+and the end number0 leave the Page
+---
+## when you use number 2:
+```python
+1.show teachers
+2.add teacher
+3.edit teacher
+4.delete teacher
+5.select teacher
+0.back
+>>:
+```
+---
+now you see this menu
+number 1 show you all of teacher
+number2 add a new teacher
+number3 you chose a teacher and edit it
+number4 you chose a teacher for delet
+number 5 you chose a teacher
+and the end number0 leave the Page
+---
+# Number3:
+```python
+1.show courses
+2.add course
+3.edit course
+4.delete course
+0.back
+```
+---
+now you see this menu
+number 1 show you all of course
+number2 add a new course
+number3 you chose a course and edit it
+number4 you chose a course for delet
+number 5 you chose a course
+and the end number0 leave the Page
+---
+# Number4:
+```python
+1.show classrooms
+2.add classroom
+3.edit classroom
+4.delete classroom
+5.select classroom
+0.back
+```
+now you see this menu
+number 1 show you all of classroom
+number2 add a new classroom
+number3 you chose a clasroom and edit it
+number4 you chose a classroom for delet
+number 5 you chose a classroom
+and the end number0 leave the Page
+---
+# Nmber5
+save the edits
+---
+#number0
+exit
+---
