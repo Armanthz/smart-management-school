@@ -5,50 +5,84 @@ The School Management System is an application developed using the Python progra
 This project includes features such as registering student information, managing teachers, recording grades, checking academic performance, managing classes, and viewing personal information. These features make school tasks faster and easier and reduce the need for manual record-keeping.
 
 The main goal of this project is to create a simple and useful system for managing a school and improving Python programming skills. It also helps develop important programming skills such as using conditions, loops, functions, lists, and data management in Python.
----
-## Course Class
-| Attribute | Description |
+# Classes and Their Responsibilities
+
+## 1. Course
+
+| Property | Description |
 |---|---|
-| id | A unique number for each course. |
-| name | The name of the course. |
-| units | The number of units for the course. |
-| score | The student's score in the course. |
----
-## Student Class Attributes
+| `id` | A unique identifier used to find and identify a course. |
+| `name` | The name of the course. |
+| `units` | The number of units assigned to the course. |
+| `score` | Stores the student's score for the course. |
 
-| Attribute | Description |
+| Method | Description |
 |---|---|
-| id | A unique number for each student. |
-| name | The student's first name. |
-| family | The student's last name. |
-| course | The courses selected by the student. |
+| `__init__()` | Initializes a course with an ID, name, and number of units. |
+| `__eq__()` | Compares two courses using their IDs. |
 
-## Teacher Class Attributes
+## 2. Student
 
-| Attribute | Description |
+| Property | Description |
 |---|---|
-| id | A unique number for each teacher. |
-| name | The teacher's first name. |
-| family | The teacher's last name. |
-| course | The course taught by the teacher. |
-| grade | The grade assigned by the teacher. |
+| `id` | A unique identifier for the student. |
+| `name` | The student's first name. |
+| `family` | The student's family name. |
+| `courses` | A list of courses assigned to the student. |
 
-## Classroom Class Attributes
-
-| Attribute | Description |
+| Method | Description |
 |---|---|
-| id | A unique number for each classroom. |
-| course | The course assigned to the classroom. |
-| teacher | The teacher of the classroom. |
-| student | The students in the classroom. |
+| `__init__()` | Initializes a student. |
+| `__eq__()` | Compares two students using their IDs. |
 
-## School Class Attributes
+## 3. Teacher
 
-| Attribute | Description |
+| Property | Description |
 |---|---|
-| name | The name of the school. |
-| course | All courses available in the school. |
-| teacher | All teachers in the school. |
-| student | All students in the school. |
-| selected_student | The student selected by the user. |
-| selected_teacher | The teacher selected by the user. |
+| `id` | A unique identifier for the teacher. |
+| `name` | The teacher's first name. |
+| `family` | The teacher's family name. |
+| `grade` | The teacher's grade or qualification. |
+| `courses` | A list of courses assigned to the teacher. |
+
+| Method | Description |
+|---|---|
+| `__init__()` | Initializes a teacher. |
+| `__eq__()` | Compares two teachers using their IDs. |
+
+## 4. Classroom
+
+| Property | Description |
+|---|---|
+| `id` | A unique identifier for the classroom. |
+| `name` | The classroom's name. |
+| `course` | The course taught in the classroom. |
+| `teacher` | The teacher assigned to the classroom. |
+| `students` | A list of students in the classroom. |
+
+| Method | Description |
+|---|---|
+| `__init__()` | Initializes a classroom with an ID and name. |
+| `__eq__()` | Compares two classrooms using their IDs. |
+
+## 5. School
+
+| Property | Description |
+|---|---|
+| `name` | The name of the school. |
+| `courses` | Stores all courses available in the school. |
+| `teachers` | Stores all teachers registered in the school. |
+| `students` | Stores all students registered in the school. |
+| `selected_student` | Stores the currently selected student. |
+| `selected_teacher` | Stores the currently selected teacher. |
+
+| Method | Description |
+|---|---|
+| `__init__()` | Initializes the school. |
+| `add_student()` | Adds a new student if their ID doesn't already exist. |
+| `delete_student()` | Removes a student using their ID. |
+| `add_teacher()` | Adds a new teacher if their ID doesn't already exist. |
+| `delete_teacher()` | Removes a teacher using their ID. |
+| `load_data()` | Loads courses, students, and teachers from a JSON file. |
+| `save_data()` | Saves courses, students, and teachers into a JSON file. |
+
